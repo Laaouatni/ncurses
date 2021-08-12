@@ -4,7 +4,7 @@
 
 using namespace std;
 
-bool divisibile;
+bool isDivisible;
 
 void animazione(int y, int x) //funzione creata da me per semplificarmi la programmazione. serve per Output il numero attuale della coordinata X.
 {
@@ -15,15 +15,15 @@ void animazione(int y, int x) //funzione creata da me per semplificarmi la progr
 	Sleep(50);
 }
 
-void diviso(int x) //questa funzione controlla se il numero è divisibile per la larghezza dello Schermo (X) o no. se è divisibile cambierà il bool in TRUE, oppure FALSE.
+void divedereTest(int x) //questa funzione controlla se il numero è isDivisible per la larghezza dello Schermo (X) o no. se è isDivisible cambierà il bool in TRUE, oppure FALSE.
 {
 	if (x % 70 == 0)
 	{
-		divisibile = true;
+		isDivisible = true;
 	}
 	else
 	{
-		divisibile = false;
+		isDivisible = false;
 	}
 }
 
@@ -42,22 +42,22 @@ int main()
 		if (x > 70)
 		{
 			x=1;
-			while (divisibile)
+			while (isDivisible)
 			{
 				initscr();
 				refresh();
 				y++;
 				animazione(y, x);
-				diviso(x);
+				divedereTest(x);
 			}
 
-			while (!divisibile)
+			while (!isDivisible)
 			{
 				initscr();
 				refresh();
 				x++;
 				animazione(y, x);
-				diviso(x);
+				divedereTest(x);
 			}
 		}
 	}
