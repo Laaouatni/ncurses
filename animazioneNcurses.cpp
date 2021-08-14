@@ -6,18 +6,18 @@ using namespace std;
 
 bool isDivisible;
 
-void animazione(int y, int x) //funzione creata da me per semplificarmi la programmazione. serve per Output il numero attuale della coordinata X.
+void animazione(int asseY, int asseX) //funzione creata da me per semplificarmi la programmazione. serve per Output il numero attuale della coordinata asseX.
 {
 	initscr();
-	x++;
+	asseX++;
 	refresh();
-	mvprintw(y, x, " %d", x);
+	mvprintw(asseY, asseX, " %d", asseX);
 	Sleep(50);
 }
 
-void divedereTest(int x) //questa funzione controlla se il numero è isDivisible per la larghezza dello Schermo (X) o no. se è isDivisible cambierà il bool in TRUE, oppure FALSE.
+void divedereTest(int asseX) //questa funzione controlla se il numero è isDivisible per la larghezza dello Schermo (asseX) o no. se è isDivisible cambierà il bool in TRUE, oppure FALSE.
 {
-	if (x % 70 == 0)
+	if (asseX % 70 == 0)
 	{
 		isDivisible = true;
 	}
@@ -30,34 +30,34 @@ void divedereTest(int x) //questa funzione controlla se il numero è isDivisible
 int main()
 {
 	initscr();
-	int y = 1;
-	int x = 2;
+	int asseY = 1;
+	int asseX = 2;
 
-	while (x != 0)
+	while (asseX != 0)
 	{
 		refresh();
-		x++;
-		animazione(y, x);
+		asseX++;
+		animazione(asseY, asseX);
 
-		if (x > 70)
+		if (asseX > 70)
 		{
-			x=1;
+			asseX=1;
 			while (isDivisible)
 			{
 				initscr();
 				refresh();
-				y++;
-				animazione(y, x);
-				divedereTest(x);
+				asseY++;
+				animazione(asseY, asseX);
+				divedereTest(asseX);
 			}
 
 			while (!isDivisible)
 			{
 				initscr();
 				refresh();
-				x++;
-				animazione(y, x);
-				divedereTest(x);
+				asseX++;
+				animazione(asseY, asseX);
+				divedereTest(asseX);
 			}
 		}
 	}
