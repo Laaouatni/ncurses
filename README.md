@@ -1,3 +1,7 @@
+# this was my first git repo 
+## used for testing vscode with git 
+### (as a very very begginer)
+
 utilizzo la libreria `ncurses.h` per creare un programma che crea un'animazione lungo l'asse X, cioè l'asse orizzontale...
 l'animazione non è proprio un'animazione nativa, ma di terminale:
 
