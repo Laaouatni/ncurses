@@ -23,3 +23,5 @@ c'è un piccolo bug se notate, Che non cancella il numero 71. (71 è la grandezz
 per favore se sapete alcuni metodi per aiutarmi per imparare di piu, grazie. solo se avete voglia di aiutarmi.
 
 DISCLAIMER: tutto il codice è stato scritto da zero, ne copiato da nessuna parte. ed ammetto ho usato la documentazione di microsoft, per capire qualcosa.
+
+![](https://visitor-badge.glitch.me/badge?page_id=ncurses)
